@@ -3,13 +3,18 @@ import { type getCarType } from "@/app/types";
 
 
 
-export const getCars = async () =>{
-    const response = await axios.get<getCarType>(
-        'https://car-rental-api.goit.global/'
+export const getCars = async (page: number): Promise<getCarType[]> =>{
+    const response = await axios.get(
+        'https://car-rental-api.goit.global/cars',
+        {
+            params:{
+                page: page
+            }
+        }
     )
 
 
-    return response.data;
+    return response.data.cars;
 }
 
 

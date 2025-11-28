@@ -2,6 +2,7 @@ export type getCarType ={
     id: string,
     year: string,
     brand: string,
+    model: string,
     type: string,
     img: string,
     descr: string,

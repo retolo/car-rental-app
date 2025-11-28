@@ -1,0 +1,34 @@
+
+
+
+.buttonHeader{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+    font-family: var(--font-family);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.buttonHeader:hover{
+    color: #3470FF
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.header{
+    padding: 24px 120px;
+    background-color: #F2F4F7;
+}
+
+.list{
+    display: flex;
+    gap: 32px;
+}

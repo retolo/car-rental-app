@@ -1,0 +1,93 @@
+.imageCar{
+    border-radius: 14px;
+    margin-bottom: 16px;
+}
+
+.brand{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+}
+
+.container{
+  max-width: 1440px;
+  margin: 0 auto;
+  /* padding: 0 120px; */
+  padding-left: 120px;
+}
+
+.addressCarWrapper{
+    padding-bottom: 28px;
+}
+
+.model{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #3470FF;
+}
+
+.year{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+}
+
+.rentalPrice{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #3470FF;
+}
+
+.aboutCarText{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    color: #6C717B;
+    max-width: 276px;
+}
+
+.blockCar{
+
+    width: 276px;
+}
+.buttonCar{
+    border-radius: 12px;
+    width: 276px;
+    height: 44px;
+    background-color: #3470FF;
+    cursor: pointer;
+
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #fff;
+    border: none;
+
+    margin-bottom: 48px;
+}
+
+
+.aboutCarWrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+}
+
+
+.listCars{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 48px;
+    justify-content: center;
+}
