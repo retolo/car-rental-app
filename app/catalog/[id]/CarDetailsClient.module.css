@@ -1,0 +1,263 @@
+
+.wrapperAllBlock{
+    display: flex;
+    gap: 72px;
+    margin-top: 84px;
+}
+
+
+
+.wrapperImageBLock{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mainImage{
+    border-radius: 19px;
+}
+
+
+.formHeader{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #101828;
+    padding-bottom: 8px;
+}
+.text{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #8D929A;
+
+}
+
+.formWrapper{
+    border: 1px solid #DADDE1;
+    border-radius: 10px;
+    padding: 32px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.input{
+    border-radius: 12px;
+    padding: 12px 20px;
+    background-color: #F7F7F7;
+    border: none;
+}
+
+.input::placeholder{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #8D929A;
+}
+.textArea::placeholder{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #8D929A;
+}
+
+.textArea{
+    border-radius: 12px;
+    padding: 12px 20px 56px;
+    background-color: #F7F7F7;
+    border: none;
+}
+.input:focus{
+    outline: none;
+}
+
+.textArea:focus{
+    outline: none;
+}
+
+.sendButton{
+    border-radius: 12px;
+    width: 156px;
+    height: 44px;
+    background-color: #3470FF;
+    cursor: pointer;
+
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #fff;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    margin-top: 36px;
+}
+
+.mainHeaderInfo{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    color: #101828;
+}
+
+.id{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #6C717B;
+    padding-left: 16px; 
+}
+.wrapperCarInfo{
+    margin-bottom: 68px;
+}
+.wrapperAddress{
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    align-items: center;
+    
+}
+
+.address{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+    padding-left: 4px;
+    padding-right: 16px; 
+}
+
+.mileage{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;   
+}
+
+.rentalPrice{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    color: #3470FF; 
+    padding-bottom: 32px;   
+}
+
+.descr{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;   
+}
+
+.mainHeaderConditions{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #101828; 
+    margin-bottom: 20px;   
+}
+
+.conditionsList > li{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.conditionsList{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.wrapperConditions{
+    margin-bottom: 110px;
+}
+
+.rentalConditionsText{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;  
+}
+
+
+.mainHeaderSpecifications{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #101828;  
+    margin-bottom: 20px;
+}
+
+
+.listSpecifications{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.listSpecifications > li{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.textSpecifications{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;   
+}
+
+.wrapperSpecifications{
+    margin-bottom: 110px;
+}
+
+
+.mainHeaderAccessories{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #101828;  
+    margin-bottom: 20px; 
+}
+
+.listAccessories{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.listAccessories > li{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.accessoriesText{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;  
+}

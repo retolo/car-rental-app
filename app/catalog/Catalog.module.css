@@ -91,3 +91,24 @@
     column-gap: 48px;
     justify-content: center;
 }
+
+
+.moreButton{
+    cursor: pointer;
+    border: 1px solid #3470FF;
+    border-radius: 12px;
+    width: 156px;
+    height: 44px;
+
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+
+    display: block;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 124px;
+    background-color: transparent;
+}

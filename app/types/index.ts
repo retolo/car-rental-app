@@ -5,9 +5,9 @@ export type getCarType ={
     model: string,
     type: string,
     img: string,
-    descr: string,
-    fuel: string,
-    engine: string,
+    description: string,
+    fuelConsumption: string,
+    engineSize: string,
     accessories: string[],
     functionalities: string[],
     rentalPrice: string,
@@ -16,6 +16,12 @@ export type getCarType ={
     rentalConditions: string[],
     mileage: string
 
+}
+
+
+
+export type getBrandsType = {
+    brands: string[]
 }
 
 
