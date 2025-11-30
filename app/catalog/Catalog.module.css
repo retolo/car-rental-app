@@ -11,12 +11,7 @@
     color: #101828;
 }
 
-.container{
-  max-width: 1440px;
-  margin: 0 auto;
-  /* padding: 0 120px; */
-  padding-left: 120px;
-}
+
 
 .addressCarWrapper{
     padding-bottom: 28px;
@@ -56,8 +51,22 @@
 }
 
 .blockCar{
-
+    position: relative;
     width: 276px;
+}
+
+.heartIcon {
+    position: absolute;
+    left: 244px;
+    top: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    filter: grayscale(1);
+}
+
+.heartIcon.active {
+    filter: grayscale(0);
+    fill: red;
 }
 .buttonCar{
     border-radius: 12px;
@@ -111,4 +120,139 @@
     margin-top: 80px;
     margin-bottom: 124px;
     background-color: transparent;
+}
+
+.wrapperRangeInput{
+    display: flex;
+    background-color: #DADDE1;
+    width: 160px;
+    border: 1px solid #DADDE1;
+    border-radius: 12px 0 0 12px;
+
+}
+
+.rangeInput{
+    border: none;
+    
+
+}
+
+.rangeInput:focus{
+    outline: none;
+}
+
+.filters {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 56px;
+    margin-top: 84px;
+
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    
+}
+
+.label {
+    font-size: 12px;
+    line-height: 1.33;
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: #8D929A;
+}
+
+.select {
+    appearance: none;
+    background: #F7F7F7 url('/icons/chevron-down.svg') no-repeat right 10px center / 16px;
+    
+    padding-right: 30px;
+    padding: 12px 16px;
+
+    border-radius: 12px;
+    border: none;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    font-family: var(--font-family);
+    color: #101828;
+
+    width: 204px;
+    height: 44px;
+    cursor: pointer;
+}
+
+
+.select:focus{
+    outline: none;
+}
+
+.rangeContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #F7F7F7;
+    border-radius: 12px;
+    border: none;
+    width: 320px;
+    height: 44px;
+    padding-left: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.rangeBlock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rangeInput {
+    width: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #F7F7F7;
+    outline: none;
+    font-size: 14px;
+}
+
+
+
+
+.rangeText {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+    font-weight: 500;
+}
+
+.divider {
+    width: 1px;
+    height: 220%;
+    background: #ddd;
+}
+
+.searchBtn {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--font-family);
+    line-height: 1.25;
+    background: #3470FF;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 156px;
+    height: 44px;
+}
+
+.searchBtn:hover {
+    background: #1d5de8;
 }

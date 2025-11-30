@@ -8,7 +8,8 @@ const nextConfig: NextConfig = {
         hostname: 'ac.goit.global',
       }
     ]
-  }
+  },
+  
 };
 
 export default nextConfig;

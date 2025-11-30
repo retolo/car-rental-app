@@ -6,6 +6,8 @@ import Link from "next/link";
 import css from './Catalog.module.css'
 import { useEffect, useState } from "react";
 import { type getCarType } from "@/app/types";
+
+
 function Catalog(){ 
 
 
@@ -17,11 +19,13 @@ function Catalog(){
 
     const [price, setPrice] = useState<string>('');
 
-    const [error, setError] = useState<string>('');
 
     const [from, setFrom] = useState('');
 
     const [to, setTo] = useState('');
+
+    const [liked, setLiked] = useState(false);
+
 
     const [count, setCount] = useState<number>(0);
     
@@ -46,16 +50,31 @@ function Catalog(){
 
         const setData = () =>{
 
-            if(data){
-                setCars((prev) => [...prev, ...data.cars])
+            if(!data){
+                return;
+            }
+
+            if(page === 1){
+                setCars(data.cars)
             }else{
-                setError('No cars was found')
+                setCars(prev => [...prev, ...data.cars]);
             }
         }
 
 
         setData();
-    }, [data])
+    }, [data, page]);
+
+
+    const handleSearch = () =>{
+        setCount(() => count + 1)
+        setPage(1);
+        setCars([]);
+    }
+
+    useEffect(() =>{
+        console.log(count);
+    }, [count])
 
 
     
@@ -64,53 +83,90 @@ function Catalog(){
 
     return(
         <>
-            <div className={css.container}>
-                <div>
-                    <select onChange={(e) => setBrand(e.currentTarget.value)}>
-                        {brands !== undefined && brands.map((brand, index) =>(
-                            <option  key={index} value={brand}>{brand}</option>
-                        ))}
-                    </select>
-                    <select onChange={(e) => setPrice(e.currentTarget.value)}>
-                        <option>30</option>
-                        <option>40</option>
-                        <option>50</option>
-                        <option>60</option>
-                        <option>70</option>
-                        <option>80</option>
-                    </select>
-                    <div>
-                        <div className={css.label}>Car mileage / km</div>
-                        <div className="range-container">
-                            <input
-                                type="text"
-                                value={from}
-                                onChange={(e) => setFrom(e.currentTarget.value)}
-                                className="range-input"
-                                placeholder="From: "
-                            />
+            <div className={'container'}>
+                <div className={css.filters}>
+                    <div className={css.field}>
+                        <label className={css.label}>Car brand</label>
+                        <select
+                            className={css.select}
+                            onChange={(e) => setBrand(e.currentTarget.value)}
+                        >
+                            
+                            <option value="Choose a brand">Choose a brand</option>
+                            
+                            {brands?.map((brand, index) => (
+                                <option key={index} value={brand}>{brand}</option>
+                            ))}
+                        </select>
+                    </div>
 
-                            <div className="divider"></div>
 
-                            <input
-                                type="text"
-                                value={to}
-                                onChange={(e) => setTo(e.currentTarget.value)}
-                                className="range-input"
-                                placeholder="To: "
-                            />
+                    <div className={css.field}>
+                        <label className={css.label}>Price / 1 hour</label>
+                        <select
+                            className={css.select}
+                            onChange={(e) => setPrice(e.currentTarget.value)}
+                        >
+                            <option>Choose a price</option>
+                            <option>30</option>
+                            <option>40</option>
+                            <option>50</option>
+                            <option>60</option>
+                            <option>70</option>
+                            <option>80</option>
+                        </select>
+                    </div>
+
+
+                    <div className={css.field}>
+                        <label className={css.label}>Car mileage / km</label>
+
+                        <div className={css.rangeContainer}>
+                            <div className={css.rangeBlock}>
+                                <span className={css.rangeText}>From</span>
+                                <input
+                                    type="text"
+                                    value={from}
+                                    onChange={(e) => setFrom(e.target.value)}
+                                    className={css.rangeInput}
+                                />
+                            </div>
+
+                            <div className={css.divider}></div>
+
+                            <div className={css.rangeBlock}>
+                                <span className={css.rangeText}>To</span>
+                                <input
+                                    type="text"
+                                    value={to}
+                                    onChange={(e) => setTo(e.target.value)}
+                                    className={css.rangeInput}
+                                />
+                            </div>
                         </div>
                     </div>
 
-                    <button onClick={(e) => setCount(count + 1)}>Search</button>
+                    <button className={css.searchBtn} onClick={handleSearch}>
+                        Search
+                    </button>
                 </div>
+            
+
 
 
                 <div className={css.wrapperCars}>
                     <ul className={css.listCars}>
-                        {data !== undefined && data.cars.map((car) =>(
+                        {cars !== undefined && cars.map((car) =>(
                             <li className={css.blockCar} key={car.id}>
                                 <Image className={css.imageCar} src={car.img} alt="car photo" width={276} height={278}/>
+                                <Image 
+                                    src="/icons/heart.svg"
+                                    width={20}
+                                    height={20}
+                                    alt="heart"
+                                    className={css.heartIcon}
+                                    />
+
                                 <div className={css.wrapperInfoCar}>
                                     <div className={css.aboutCarWrapper}>
                                         <p className={css.brand}>{car.brand} <span className={css.model}>{car.model}, </span>{car.year}</p>
@@ -130,7 +186,7 @@ function Catalog(){
                         ))}
                     </ul>
                 </div>
-                {page !== data?.totalPages && data?.cars.length !== 0 &&
+                {page !== data?.totalPages && cars.length !== 0 &&
                     <button type="button" onClick={() => setPage(page + 1)} className={css.moreButton}>Load more</button>
                 }
                 
