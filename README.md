@@ -1,3 +1,115 @@
+Car Rental App
+
+
+Description: 
+
+Car rental service for those who value freedom of movement.
+Choose from hundreds of proven cars — from affordable sedans to premium SUVs.
+Simple booking, transparent conditions and comfort in every trip.
+
+
+Main functions:
+
+1 Car Catalog
+
+View all available cars
+
+Detailed cards (photos, specifications, price)
+
+Filter by brand, price, etc.
+
+Search by model name
+
+2 Car booking
+
+Select rental date and time
+
+Online registration
+
+Calculate price
+
+Reserve confirmation
+
+Installation instructions
+
+git clone <url>
+cd project-folder
+
+npm install
+
+npm run dev
+
+
+User Instructions
+1. Open the catalog
+
+Go to the "Cars" section and select a car by parameters or view the entire list.
+
+2. View car details
+
+Click on the desired model to view:
+
+photo
+
+year of manufacture
+
+specifications
+
+rental rules
+
+price
+
+3. Make a reservation and receive confirmation
+
+After placing an order, you will receive a confirmation and instructions for receiving the car
+
+
+About the author
+
+The author of the project is an independent web developer specializing in creating modern and user-friendly web applications.
+
+The main focus is on interfaces for businesses, marketplaces, booking systems and automation tools.
+
+The developer has experience working with the following technologies:
+
+JavaScript / TypeScript
+
+React, Next.js
+
+Node.js
+
+REST API
+
+CSS Modules / Styled Components
+
+MongoDB
+
+performance optimization and UI layout tools
+
+In the development of this service, the author was responsible for:
+
+project design and architecture
+
+interface implementation
+
+creation of a filtering and search system
+
+integration with the backend API
+
+creation of custom UI components
+
+rendering speed optimization
+
+preparation of the structure for further scaling
+
+The author's main goal is to create clear, fast and high-quality web solutions that bring real benefits to users.
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
